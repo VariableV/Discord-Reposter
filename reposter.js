@@ -451,8 +451,8 @@ function sendCommands(channel) {
 }
 
 client.on("message", function(message) {
-	repostLive(message);
 	if (message.author.bot) return;
+	repostLive(message);
 	/*const args = message.content.toLowerCase().split(" ");
 	const prefix = config.prefixes[(message.guild || message.channel).id] || "/";
 	if (args[0].startsWith(`${prefix}repost`)) {
