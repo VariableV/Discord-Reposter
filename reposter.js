@@ -196,7 +196,6 @@ const systemMessages = {
 
 async function sendMessage(message, channel, webhook, author) {
 	if (inactive(channel.id, message.channel.id)) return;
-	if (message.author.id === "159985870458322944") return; // mee6
 	if (message.type !== "DEFAULT") {
 		await channel.send(`**${replaceAll(channel, niceName(channel, message.channel, message.author))}${systemMessages[message.type]}**`).catch(console.error);
 	} else if (message.author.id !== author) {
@@ -453,51 +452,4 @@ function sendCommands(channel) {
 client.on("message", function(message) {
 	if (message.author.bot) return;
 	repostLive(message);
-	/*const args = message.content.toLowerCase().split(" ");
-	const prefix = config.prefixes[(message.guild || message.channel).id] || "/";
-	if (args[0].startsWith(`${prefix}repost`)) {
-		switch (args[1]) {
-		case undefined:
-		case "help":
-		case "commands":
-			sendCommands(message.channel);
-			break;
-		case "replacements":
-			sendReplacements(message.channel, message.author.id);
-			break;
-		case "replace":
-			setReplacement(message.channel, args[2], args[3]);
-			break;
-		case "prefix":
-			setPrefix(message.channel, args[2]);
-			break;
-		case "tags":
-		case "nicknames":
-		case "pins":
-			setBoolean(message.channel, args[1], args[2]);
-			break;
-		case "stop":
-		case "halt":
-		case "cease":
-		case "terminate":
-		case "suspend":
-		case "cancel":
-		case "die":
-		case "end":
-			delete config.active[message.channel.id];
-			delete config.live[message.channel.id];
-			updateStatus();
-			updateJson();
-			message.channel.send("**Reposting Terminated!**").catch(console.error);
-			break;
-		default:
-			const last = args[2];
-			if (last) {
-				repost(last, message, args[0].indexOf("hook") !== -1, args[1] === "from", args[0].indexOf("live") !== -1);
-			} else {
-				repost(args[1], message, args[0].indexOf("hook") !== -1, false, args[0].indexOf("live") !== -1);
-			}
-			break;
-		}
-	}*/
 });
