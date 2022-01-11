@@ -3,67 +3,6 @@
 # Discord Reposter
 Modified version of https://github.com/MysteryPancake/Discord-Reposter to post all non-bot messages in certain channels with ID of user.
 
-## Commands
-### Repost To
-*Reposts to a channel.*
-
-`/repost <CHANNEL>` or `/repost to <CHANNEL>`
-
-### Repost From
-*Reposts from a channel.*
-
-`/repost from <CHANNEL>`
-
-### Repost Webhook
-*Reposts through a webhook.*
-
-`/reposthook` or `/repostwebhook` instead of `/repost`
-
-### Repost Live
-*Reposts messages as they come.*
-
-`/repostlive` or `/repostlivehook` instead of `/repost`
-
-### Repost Stop
-*Stops reposting.*
-
-`/repost stop` or `/repost halt` or `/repost cease` or `/repost terminate` or `/repost suspend` or `/repost cancel` or `/repost die` or `/repost end`
-
-### Repost Commands
-*Posts the command list.*
-
-`/repost help` or `/repost commands`
-
-### Repost Replace
-*Replaces text when reposting.*
-
-`/repost replace <FIND> <REPLACE>`
-
-### Repost Replacements
-*Posts the replacement list.*
-
-`/repost replacements`
-
-### Repost Prefix
-*Changes the bot prefix.*
-
-`/repost prefix <PREFIX>`
-
-### Repost Tags
-*Toggles user tags when reposting.*
-
-`/repost tags` or `/repost tags <STATE>`
-
-### Repost Nicknames
-*Toggles nicknames when reposting.*
-
-`/repost nicknames` or `/repost nicknames <STATE>`
-
-### Repost Pins
-*Toggles pins when reposting.*
-
-`/repost pins` or `/repost pins <STATE>`
-
 ## Setup
 1. [Create your app with a Bot](https://discordapp.com/developers/applications/me).
 2. Copy your bot's secret token and [paste it on this line](reposter.js#L9). Please don't leak your secret token on GitHub. If you're using Heroku, try to replace it with `process.env.SECRET_BOT_TOKEN` and setup the environment variable in Heroku.
