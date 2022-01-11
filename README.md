@@ -1,11 +1,7 @@
 <img src="repost.png?raw=true" width="75" align="left">
 
 # Discord Reposter
-A simple bot I made because I wanted my friends to stop deleting their messages.
-
-It reposts all the messages from one channel to another, which can even be in another server!
-
-However, the bot needs to be in both servers for this to work.
+Modified version of https://github.com/MysteryPancake/Discord-Reposter to post all non-bot messages in certain channels with ID of user.
 
 ## Commands
 ### Repost To
